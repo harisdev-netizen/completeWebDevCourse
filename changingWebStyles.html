@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <title>Changing Website Content</title>
+
+    <style>
+
+        #circle {
+            height: 160px;
+            width: 160px;
+            border-radius: 50%;
+            background-color: rgb(199, 98, 98);
+            margin: 20px;
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            background-color: indigo;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+
+    <div class="square"></div>
+
+    <div class="square"></div>
+
+    <script type="text/javascript">
+
+        $("#circle").click(function() {
+
+            // $("#circle").css("background-color", "red")     //TO MANIPULATE CSS WE USE (.css)
+            
+            // alert($("#circle").css("Background-color"))     //IT CAN ALSO BE USE4D TO KNOW THE VALUE OF THE PROPERTIES
+
+            // alert($("body").css("width"))                      //HERE I HAVE ALERT THE (width) OF MY WEBPAGE
+
+        })
+
+        $("div").click(function() {
+
+            // $(this).css("display", "none")                      //(this) IS THE ELEMENT THAT HAS BEEN CLICKED
+
+            if($(this).attr("id") == "circle"){                     //AS WE HAVE USED CLASS FOR SQUARE SO WE HAVE TO USE IF STATEMENT FOR THAT PURPOSE
+
+            alert("You clicked on a " + $(this).attr("id"))        //ALERTING WHICH SHAPE HAS BEEN CLICKED
+
+            } else {
+
+                alert("You clicked on a square")
+
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
