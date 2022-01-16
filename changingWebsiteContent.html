@@ -6,13 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="jquery.min.js"></script>
     <title>Changing Website Content</title>
+
+    <style>
+        #circle {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 50px;
+        }
+    </style>
 </head>
 <body>
+    <div id="circle"></div>
+    <p>This is some text.</p>
+    
+    <iframe src="https://www.cnn.com" frameborder="0"></iframe>
 
     <script type="text/javascript">
-        
+
+        $("#circle").hover(function() {                             //WE CAN USE (.click) OR (.hover) methods
+            $("iframe").attr("src", "https://www.facebook.com")     //USING ATTRIBUTE (attr) TO CHANGE THE IFRAME OF HTML SECTION TO WHATEVER WEBPAGE WE WANT IT TO CHANGE
+        })
+
+
+        // $("#circle").click(function() {         //STRING ($) IS USED TO ENVOKE JQUERY
+            
+        //     $("p").html("This text has changed!");  //TO CHANGE THE HTML OF AN ELEMENT WE USE (.html)
+
+        //     alert($("p").html());       //TO GET THE HTML IN ALERT
+
+        // });
 
     </script>
     
 </body>
-</html>`
+</html>
