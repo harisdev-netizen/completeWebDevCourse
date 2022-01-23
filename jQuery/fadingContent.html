@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <title>Changing Website Styles</title>
+
+    <style>
+
+        #circle {
+            height: 160px;
+            width: 160px;
+            border-radius: 50%;
+            background-color: rgb(199, 98, 98);
+            margin: 20px;
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            background-color: indigo;
+            margin: 20px;
+        }
+
+        #hiddenText {
+            display: none;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(240, 27, 27);
+            color: white;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="circle"></div>
+
+    <div class="square"></div>
+
+    <div class="square"></div> -->
+
+    <p id="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias eaque incidunt recusandae illo non neque quo cumque ab facere provident. Consectetur quaerat error </p>
+
+    <!-- <button id="fadeOut">Fade Out!</button>
+
+    <p id="hiddenText">This text will be hidden initially.</p>
+    <button id="fadeIn">Fade In Text</button> -->
+
+    <button id="toggle">Toggle Text</button>
+
+    <script type="text/javascript">
+        // $("div").click(function() {
+
+        //     // // $(this).fadeOut();                       //by applying the function fadeout & see the magic
+        //     // // $(this).hide();                          //hide function can also be used which just does the fade but without any kind of gradual fadding
+        //     // $(this).fadeOut("slow", function() {
+
+        //     //     alert("Fadeout has finished!!");        //this will alert us the message when we click on any of our div's
+        //     // });
+        // });
+
+
+        // $("#fadeOut").click(function() {
+
+        //     $("#text").fadeIn();                                 //this function will enable us to click on the button and fadeout the paragraph text
+
+        // });
+
+
+        // $("#fadeIn").click(function() {
+
+        //     $("#hiddenText").fadeIn();                              //this function will enable us to click the button and fade in the hidden text
+        // })
+        
+        
+        // $("#toggle").click(function() {                             //in this function we will fadeIn the hidden text and fadeOut the available text
+
+        //     if($("#text").css("display") == "none") {                  //using CSS diaplay property to check out if the text has faded out or not
+                
+        //         $("#text").fadeIn();
+
+        //     } else {
+
+        //         $("#text").fadeOut();
+        //     }
+        // });
+
+        // Another way of FadeIn and FadeOut the content is to make a var and call it as shown in the code below
+
+        var textShowing = true;                                     //variable
+
+        $("#toggle").click(function() {                             //in this function we will fadeIn the hidden text and fadeOut the available text
+
+            if(textShowing) {                                       //we can just simply call the function "textShowing"
+    
+            $("#text").fadeOut(function() {
+                textShowing = false;                               //using a callback function to fadeOut, so when the text is fadeOut make the textShowing false
+            });
+
+        } else {
+
+            $("#text").fadeIn(function() {                          //using a callback function to fadeIn, so when the text is fadeOut make the textShowing true
+                textShowing = true;
+            });
+        }
+        });
+
+    </script>
+
+    <div class="footer">
+
+        <p>Code By: <strong>Haris</strong></p>
+
+    </div>
+    
+</body>
+</html>
