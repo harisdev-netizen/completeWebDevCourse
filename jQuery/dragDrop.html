@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droppable - jQuery</title>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="./jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.css">
+    <script src="./jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.js"></script>
+
+    <style>
+        #draggable {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px 10px 10px 0;
+            background-color: springgreen;
+        }
+      
+        #droppable {
+            width: 250px;
+            height: 250px;
+            padding: 0.5em;
+            float: left; 
+            margin: 10px;
+            background-color: tomato;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div id="draggable" class="ui-widget-content"></div>
+    <div id="droppable" class="ui-widget-content"></div>
+    
+    <script type="text/javascript">
+
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable( {
+            drop: function(event, ui) {
+                alert("Dropped!");                  // alert when dropped
+
+                // console.log(event);              //using console log to see the event
+            }
+        });
+
+    </script>
+</body>
+</html>
