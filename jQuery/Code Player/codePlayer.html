@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Code Player</title>
+
+        <script type="text/javascript" src="../jquery.min.js"></script>
+        <link rel="stylesheet" href="./codestyle.css">
+
+    </head>
+
+    <body>
+
+        <div id="header">
+            <div id="logo">
+                codePlayer
+            </div>
+            <div id="buttonContainer">
+                <div class="toggleButton active" id="html">HTML</div>
+                <div class="toggleButton" id="css">CSS</div>
+                <div class="toggleButton" id="javascript">JavaScript</div>
+                <div class="toggleButton active" id="output">Output</div>
+            </div>
+        </div>
+
+        <div id="bodyContainer">
+            <textarea id="htmlPanel" class="panel"><p id="paragraph">Hello World!</p></textarea>
+            <textarea id="cssPanel" class="panel hidden">p { color: green; }</textarea>
+            <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hello Haris!";</textarea>
+            <iframe id="outputPanel" class="panel"></iframe>
+        </div>
+
+        <script src="./code.js"></script>
+    </body>
+</html>
