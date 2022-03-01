@@ -17,7 +17,6 @@ body {
     font-size: 110%;
     padding: 5px 5px;
     background: -webkit-linear-gradient(rgb(131, 224, 193), rgb(58, 62, 110));
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
